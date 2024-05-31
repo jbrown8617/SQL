@@ -1,3 +1,4 @@
+--I used SQL to select relevant items from a database and group them by price and average ratings.
 SELECT * 
 FROM superstore;
 
