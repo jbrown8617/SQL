@@ -1,0 +1,19 @@
+--I used SQL to see which product is the best option for a certain customer. 
+
+SELECT product_name
+FROM bank_products;
+
+--I used SQL query to show product names that have a checking or savings product type. 
+
+SELECT product_name
+FROM bank_products
+WHERE product_type = "Checking"
+OR product_type = "Savings"
+
+--I used SQL query to show product names that have a Savings product type and an interest rate of at least 0.75 and has no monthly fee.
+
+SELECT product_name, interest_rate
+FROM bank_products
+WHERE product_type="Savings"
+AND interest_rate>=0.75
+AND monthly_fee=0;
