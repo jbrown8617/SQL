@@ -1,0 +1,30 @@
+SELECT * 
+FROM superstore;
+
+SELECT (item_name), price
+FROM superstore
+ORDER BY price;
+
+SELECT MAX(price)
+FROM superstore;
+
+SELECT SUM(price), item_name
+FROM superstore
+GROUP BY item_name;
+
+SELECT SUM(price)
+FROM superstore
+WHERE category ="Kitchen Supplies";
+
+SELECT MAX(price)
+FROM superstore
+WHERE category ="Kitchen Supplies";
+
+SELECT (stock_quantity),item_name
+FROM superstore
+WHERE category ="Appliances";
+
+SELECT *
+FROM superstore
+WHERE average_rating >"4.3"
+ORDER BY average_rating ASC;
