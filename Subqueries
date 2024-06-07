@@ -1,0 +1,19 @@
+-- I created a query to select product names of all Internet products
+
+SELECT product_name
+FROM products
+WHERE product_type = "Internet";
+
+-- I created a query to select the customer IDs for all customers who are subscribed to High-Speed Internet (product_id=1)
+
+SELECT customer_id
+FROM customer_subscriptions
+WHERE product_id = 1;
+
+-- I created a query to select email addresses of customers who are subscribed to Internet product types
+
+SELECT email
+FROM customer_subscriptions
+WHERE product_id IN (SELECT product_id
+FROM products
+WHERE product_type = "Internet");
