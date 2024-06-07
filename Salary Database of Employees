@@ -1,0 +1,13 @@
+-- I created a query to calculate how much money is spent on salaries for each department where the total spent is at least $300,000
+
+SELECT department, SUM(salary) AS total_spent
+FROM employees
+GROUP BY department
+HAVING total_spent >=300000;
+
+-- I created a query to select all departments that pay an average of at least $70,000 per year
+
+SELECT department, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY department
+HAVING avg_salary >=70000;
